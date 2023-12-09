@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+</head>
+
+<body>
+    <h1>Prediction Result</h1>
+
+    {% if class_name %}
+        <p>Class: {{ class_name }}</p>
+        <p>Confidence: {{ confidence }}</p>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+    {% else %}
+        <p>No prediction available.</p>
+    {% endif %}
+</body>
+
+</html>
